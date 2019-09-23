@@ -93,8 +93,9 @@ server.ssl.enabled: true
 server.ssl.certificate: $SECURITY_KIBANA_SSL_CERT_PATH/kibana-access.pem
 server.ssl.key: $SECURITY_KIBANA_SSL_KEY_PATH/kibana-access.key
 server.ssl.supportedProtocols: 
-  - TLSv1.1
   - TLSv1.2
+server.customResponseHeaders:
+  Strict-Transport-Security: \"max-age=31536000; includeSubDomains\"
 " >> /usr/share/kibana/config/kibana.yml
 
   echo "Create SSL directories."

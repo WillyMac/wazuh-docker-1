@@ -36,5 +36,6 @@ xpack.monitoring.enabled: $XPACK_MONITORING
 xpack.maps.enabled: $XPACK_MAPS
 xpack.uptime.enabled: $XPACK_UPTIME
 console.enabled: $XPACK_DEVTOOLS
+xpack.security.sessionTimeout: 900000
 " >> $kibana_config_file
 fi
