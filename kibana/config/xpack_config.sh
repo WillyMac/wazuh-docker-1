@@ -37,5 +37,6 @@ xpack.maps.enabled: $XPACK_MAPS
 xpack.uptime.enabled: $XPACK_UPTIME
 console.enabled: $XPACK_DEVTOOLS
 xpack.security.sessionTimeout: 900000
+server.ssl.cipherSuites: HIGH:!ADH:!EXP:!MD5:!RC4:!3DES:!CAMELLIA:@STRENGTH
 " >> $kibana_config_file
 fi
