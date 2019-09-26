@@ -3,7 +3,8 @@ FROM docker.elastic.co/kibana/kibana:6.8.2
 ARG WAZUH_APP_VERSION=3.9.4_6.8.2
 USER root
 
-ADD https://packages-dev.wazuh.com/pre-release/app/kibana/wazuhapp-${WAZUH_APP_VERSION}.zip /tmp
+COPY config/wazuhapp-${WAZUH_APP_VERSION}.zip /tmp
+#ADD https://packages-dev.wazuh.com/pre-release/app/kibana/wazuhapp-${WAZUH_APP_VERSION}.zip /tmp
 
 # This CA is created for testing. Please set your own CA pem signed certificate. 
 # command: $ docker build <kibana_directory> --build-arg SECURITY_CA_PEM_LOCATION=<CA_PEM_LOCATION>
